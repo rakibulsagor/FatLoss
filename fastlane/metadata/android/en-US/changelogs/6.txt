@@ -1,0 +1,6 @@
+Version 3.3
+
+- Added editable profile gender and height fields.
+- Updated BMI calculations to use edited height immediately.
+- Added profile data migration for existing installs.
+- Included gender in JSON backup export and import.

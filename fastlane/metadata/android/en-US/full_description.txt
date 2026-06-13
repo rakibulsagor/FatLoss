@@ -1,0 +1,22 @@
+Fat Loss is a lightweight open-source Android fitness tracker focused on daily fat-loss habits.
+
+It helps you track the basics that matter: workouts, walking, food, sleep, weight progress, steps, reminders, and simple analytics. The app is built natively with Kotlin, Jetpack Compose, Room, and Material 3.
+
+Features:
+
+- Daily dashboard for walk, workout, diet, and sleep targets.
+- Editable weekly workout plan with custom exercises.
+- Food log with calorie and protein tracking.
+- Weight, photo, sleep, and step progress tracking.
+- Health Connect and device step counter support where available.
+- Reminder and alarm tools for workouts, meals, and habit prompts.
+- JSON and CSV backup export, import, and shareable backup text.
+- Editable profile details including name, age, gender, height, current weight, and target weight.
+
+Category: Sports & Health
+
+Source code:
+https://github.com/rakibulsagor/FatLoss
+
+Support:
+rakibul.h.sagor@proton.me
