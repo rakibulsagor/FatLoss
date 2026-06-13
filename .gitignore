@@ -1,0 +1,9 @@
+build/
+.gradle/
+.kotlin/
+tools/
+local.properties
+*.iml
+dist/*.apk
+dist/*.idsig
+!dist/FatLoss-v3.3.apk

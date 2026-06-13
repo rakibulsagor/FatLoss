@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FatLoss - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Be+Vietnam+Pro:wght@400;700&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#bdf4ff",
+                      "surface-bright": "#393939",
+                      "on-secondary-fixed": "#001f24",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-dim": "#131313",
+                      "error": "#ffb4ab",
+                      "secondary-container": "#00e3fd",
+                      "inverse-primary": "#506600",
+                      "error-container": "#93000a",
+                      "on-secondary-container": "#00616d",
+                      "secondary-fixed-dim": "#00daf3",
+                      "outline": "#8e9379",
+                      "on-tertiary-fixed-variant": "#8a1d00",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-variant": "#353534",
+                      "primary": "#ffffff",
+                      "primary-fixed": "#c3f400",
+                      "on-primary-fixed-variant": "#3c4d00",
+                      "on-primary-fixed": "#161e00",
+                      "on-secondary": "#00363d",
+                      "on-secondary-fixed-variant": "#004f58",
+                      "on-primary": "#283500",
+                      "on-primary-container": "#556d00",
+                      "on-error": "#690005",
+                      "surface-container-highest": "#353534",
+                      "surface-container-low": "#1c1b1b",
+                      "on-surface": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "tertiary-fixed-dim": "#ffb4a2",
+                      "tertiary": "#ffffff",
+                      "on-tertiary-container": "#bf2b00",
+                      "tertiary-fixed": "#ffdad2",
+                      "tertiary-container": "#ffdad2",
+                      "surface-tint": "#abd600",
+                      "on-tertiary-fixed": "#3c0700",
+                      "primary-fixed-dim": "#abd600",
+                      "secondary-fixed": "#9cf0ff",
+                      "background": "#131313",
+                      "outline-variant": "#444933",
+                      "on-tertiary": "#621100",
+                      "on-surface-variant": "#c4c9ac",
+                      "inverse-on-surface": "#313030",
+                      "surface": "#131313",
+                      "on-background": "#e5e2e1",
+                      "surface-container": "#201f1f",
+                      "primary-container": "#c3f400"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-gap": "12px",
+                      "container-padding": "16px",
+                      "base": "8px",
+                      "section-margin": "32px",
+                      "touch-target-min": "48px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Anton"],
+                      "display-lg": ["Anton"],
+                      "headline-lg": ["Anton"],
+                      "body-lg": ["Be Vietnam Pro"],
+                      "title-md": ["Be Vietnam Pro"],
+                      "label-md": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(195, 244, 0, 0.15);
+        }
+        .glow-effect-secondary {
+            box-shadow: 0 0 15px rgba(189, 244, 255, 0.15);
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #c3f400;
+            cursor: pointer;
+            margin-top: -8px;
+            box-shadow: 0 0 10px rgba(195, 244, 0, 0.5);
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: #353534;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg min-h-screen pb-24 pt-16 selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-surface-dim dark:bg-surface-dim font-headline-lg-mobile text-headline-lg-mobile fixed top-0 w-full z-50 border-b border-surface-variant flex items-center justify-between px-container-padding h-touch-target-min">
+<button aria-label="Menu" class="text-primary-fixed dark:text-primary-fixed-dim hover:bg-surface-bright/10 transition-colors active:scale-95 transition-transform flex items-center justify-center w-touch-target-min h-touch-target-min">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+<h1 class="font-display-lg text-headline-lg-mobile text-primary-fixed uppercase tracking-wider m-0">FatLoss</h1>
+<button aria-label="Streak" class="text-primary-fixed dark:text-primary-fixed-dim hover:bg-surface-bright/10 transition-colors active:scale-95 transition-transform flex items-center justify-center w-touch-target-min h-touch-target-min relative">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="absolute top-1 right-1 bg-secondary text-on-secondary text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">7</span>
+</button>
+</header>
+<main class="px-container-padding max-w-md mx-auto space-y-section-margin mt-section-margin">
+<!-- Profile Overview -->
+<section class="flex flex-col items-center justify-center space-y-stack-gap">
+<div class="relative w-24 h-24 rounded-full border-2 border-primary-fixed p-1 glow-effect">
+<img alt="Profile Picture" class="w-full h-full rounded-full object-cover" data-alt="A close up portrait of a young athletic man looking determined, set against a dark, moody background with subtle neon green rim lighting. The lighting is dramatic and high-contrast, perfectly aligning with a high-intensity fitness app's aesthetic. The mood is intense and focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg_kVJV3LYHe6y9wibmM8ZgUV7w-oRcjgghpG11CrK7DfZVMkPkWq49-m2qhaAJNXrDonGbw-e_jlg1Kwxq2-ToNHMt4lXAhRCj9V3rr0JL7hatVul62FF0--d-KSjM8dxnfJksb0whLbrknCLGmNXa2nouCrBg1gTCMB3jlm2XwQ9QraxXsK54DYjMUekBjUJjsmbGRM7wKR6XCuBHRwx3fXOTk0pd5lO3C2_xTyPwL5mODBqrfi8YeLypBRO2rkOGF4HCn2LAw"/>
+<button class="absolute bottom-0 right-0 bg-surface-container-high rounded-full p-1 border border-outline-variant hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-2 group">
+<input class="bg-transparent border-none font-headline-lg-mobile text-headline-lg-mobile text-primary text-center focus:ring-0 focus:outline-none w-auto max-w-[200px]" type="text" value="Sagor"/>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] group-hover:text-primary-fixed transition-colors">edit</span>
+</div>
+</section>
+<!-- Personal Metrics Grid (Bento style) -->
+<section class="grid grid-cols-2 gap-stack-gap">
+<div class="bg-surface-container-low rounded-lg p-4 border-l-2 border-secondary flex flex-col justify-between aspect-square">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Age</span>
+<div>
+<span class="font-headline-lg text-headline-lg text-primary">22</span>
+<span class="font-body-lg text-body-lg text-on-surface-variant ml-1">yrs</span>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-stack-gap">
+<div class="bg-surface-container-low rounded-lg p-4 border-l-2 border-primary-fixed flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Gender</span>
+<span class="font-title-md text-title-md text-primary">Male</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-4 border-l-2 border-primary-fixed flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Height</span>
+<div>
+<span class="font-title-md text-title-md text-primary">175</span>
+<span class="text-sm text-on-surface-variant">cm</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Weight Goals -->
+<section class="bg-surface-container-low rounded-lg p-container-padding space-y-stack-gap relative overflow-hidden border border-surface-bright">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-fixed/5 to-transparent pointer-events-none"></div>
+<h3 class="font-title-md text-title-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">monitor_weight</span>
+                Weight Goals
+            </h3>
+<div class="space-y-6 pt-2">
+<div>
+<div class="flex justify-between mb-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Current Weight</label>
+<span class="font-title-md text-title-md text-primary"><span class="" id="currentWeightVal">69</span> kg</span>
+</div>
+<input class="w-full" id="currentWeight" max="150" min="40" type="range" value="80"/>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Target Weight</label>
+<span class="font-title-md text-title-md text-primary-fixed"><span class="" id="targetWeightVal">66</span> kg</span>
+</div>
+<input class="w-full" id="targetWeight" max="150" min="40" type="range" value="65"/>
+</div>
+</div>
+</section>
+<!-- BMI Calculator -->
+<section class="bg-surface-container-low rounded-lg p-container-padding space-y-stack-gap border border-surface-bright glow-effect-secondary">
+<div class="flex justify-between items-start">
+<h3 class="font-title-md text-title-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">speed</span>
+                    BMI Calculator
+                </h3>
+<span class="bg-error-container text-on-error-container font-label-md text-label-md px-2 py-1 rounded border border-error/20">Overweight</span>
+</div>
+<div class="flex items-end gap-2 mt-4">
+<span class="font-display-lg text-display-lg text-primary leading-none">26.1</span>
+<span class="font-body-lg text-body-lg text-on-surface-variant pb-2">kg/m²</span>
+</div>
+<!-- Custom Gauge -->
+<div class="mt-6 space-y-2">
+<div class="h-3 w-full rounded-full flex overflow-hidden">
+<div class="h-full bg-secondary w-1/4"></div> <!-- Under -->
+<div class="h-full bg-primary-fixed w-2/4"></div> <!-- Normal -->
+<div class="h-full bg-error relative w-1/4">
+<!-- Indicator -->
+<div class="absolute top-1/2 -translate-y-1/2 left-[10%] w-1 h-5 bg-white shadow-md z-10 rounded-full"></div>
+</div> <!-- Over -->
+</div>
+<div class="flex justify-between font-label-md text-label-md text-on-surface-variant text-[10px]">
+<span class="">18.5</span>
+<span class="">25.0</span>
+<span class="">30.0</span>
+</div>
+</div>
+</section>
+<!-- Update Button -->
+<section class="bg-surface-container-low rounded-lg p-container-padding space-y-stack-gap border border-surface-bright">
+<h3 class="font-title-md text-title-md text-primary flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+    Reminders &amp; Alarms
+  </h3>
+<div class="space-y-4">
+<!-- Workout Alarm -->
+<div class="flex items-center justify-between p-3 bg-surface-container-high rounded-lg border-l-2 border-primary-fixed">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider">Workout Alarm</span>
+<input class="bg-transparent border-none p-0 font-title-md text-primary focus:ring-0" type="time" value="06:30"/>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-fixed"></div>
+</label>
+</div>
+<!-- Meal Reminder -->
+<div class="flex items-center justify-between p-3 bg-surface-container-high rounded-lg border-l-2 border-secondary">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider">Meal Reminders</span>
+<input class="bg-transparent border-none p-0 font-title-md text-primary focus:ring-0" type="time" value="20:00"/>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</section><section class="bg-surface-container-low rounded-lg p-container-padding space-y-6 border border-surface-bright mt-section-margin">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary flex items-center gap-2 mb-2 uppercase tracking-wider">
+<span class="material-symbols-outlined text-primary-fixed">developer_mode</span>
+    Developer Options
+  </h3>
+<div class="space-y-4">
+<!-- Developer Details -->
+<div class="flex items-center gap-3 p-3 bg-surface-container-high rounded-lg border-l-2 border-primary-fixed">
+<span class="material-symbols-outlined text-primary-fixed">person_pin</span>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Developer Details</span>
+<span class="font-title-md text-primary">Developed by Sagor</span>
+</div>
+</div>
+<!-- Feedback & Support -->
+<button class="w-full flex items-center justify-between p-3 bg-surface-container-high rounded-lg border-l-2 border-secondary hover:bg-surface-bright/10 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">chat_bubble</span>
+<span class="font-title-md text-primary">Send Feedback</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+<!-- About FatLoss -->
+<div class="p-3 bg-surface-container-high rounded-lg border-l-2 border-primary-fixed">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">About FatLoss</span>
+<span class="font-title-md text-primary">Version 1.0.0</span>
+</div>
+</div>
+<!-- FAQ -->
+<a class="w-full flex items-center justify-between p-3 bg-surface-container-high rounded-lg border-l-2 border-secondary hover:bg-surface-bright/10 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">help</span>
+<span class="font-title-md text-primary">FAQ</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">open_in_new</span>
+</a>
+<!-- Data Management -->
+<div class="space-y-2">
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px] block px-1">Data Management</span>
+<div class="grid grid-cols-2 gap-stack-gap">
+<button class="flex items-center justify-center gap-2 p-3 bg-surface-container-high rounded-lg border border-outline-variant hover:border-primary-fixed hover:text-primary-fixed transition-all">
+<span class="material-symbols-outlined text-[20px]">upload</span>
+<span class="font-label-md">Export</span>
+</button>
+<button class="flex items-center justify-center gap-2 p-3 bg-surface-container-high rounded-lg border border-outline-variant hover:border-secondary hover:text-secondary transition-all">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="font-label-md">Import</span>
+</button>
+</div>
+</div>
+</div>
+</section><button class="w-full bg-primary-fixed text-on-primary-fixed font-headline-lg-mobile text-headline-lg-mobile uppercase py-4 rounded-lg tracking-wider active:scale-95 transition-transform glow-effect mt-section-margin">
+            Update Profile
+        </button>
+</main>
+<!-- BottomNavBar -->
+<!-- Profile is not part of the standard JSON shell array but is logically active, suppressing standard nav might be appropriate based on rules, but user explicitly asked to keep focus on existing structure or add tab. Let's adhere to the JSON blueprint labels exactly, and highlight NONE since it's a profile page, implying it's outside the core loop, but since I must render it as requested, I'll render the shell with inactive states. -->
+<nav class="bg-surface-container-lowest dark:bg-surface-container-lowest font-label-md text-label-md fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant flex justify-around items-center h-16 px-container-padding shadow-[0_-4px_12px_rgba(195,244,0,0.05)] md:hidden"><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed active:scale-90 transition-all duration-200 w-16" href="#"><span class="material-symbols-outlined mb-1">calendar_today</span><span class="">Today</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed active:scale-90 transition-all duration-200 w-16" href="#"><span class="material-symbols-outlined mb-1">fitness_center</span><span class="">Workout</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed active:scale-90 transition-all duration-200 w-16" href="#"><span class="material-symbols-outlined mb-1">restaurant</span><span class="">Meals</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed active:scale-90 transition-all duration-200 w-16" href="#"><span class="material-symbols-outlined mb-1">monitoring</span><span class="">Progress</span></a><a class="flex flex-col items-center justify-center text-primary-fixed active:scale-90 transition-all duration-200 w-16" href="#"><span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span><span class="">Profile</span></a></nav>
+<script>
+        // Simple interactions for sliders
+        document.getElementById('currentWeight').addEventListener('input', function(e) {
+            document.getElementById('currentWeightVal').textContent = e.target.value;
+        });
+        document.getElementById('targetWeight').addEventListener('input', function(e) {
+            document.getElementById('targetWeightVal').textContent = e.target.value;
+        });
+    </script>
+</body></html>

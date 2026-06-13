@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Sagor Fat Loss - Today</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Be+Vietnam+Pro:wght@400;700&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#393939",
+                        "primary": "#ffffff",
+                        "on-tertiary": "#621100",
+                        "secondary-fixed-dim": "#00daf3",
+                        "on-secondary-fixed": "#001f24",
+                        "on-primary": "#283500",
+                        "primary-container": "#c3f400",
+                        "surface": "#131313",
+                        "secondary-container": "#00e3fd",
+                        "on-tertiary-fixed-variant": "#8a1d00",
+                        "on-error": "#690005",
+                        "outline": "#8e9379",
+                        "tertiary-fixed-dim": "#ffb4a2",
+                        "on-tertiary-container": "#bf2b00",
+                        "surface-variant": "#353534",
+                        "secondary": "#bdf4ff",
+                        "on-secondary": "#00363d",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#abd600",
+                        "on-tertiary-fixed": "#3c0700",
+                        "tertiary-container": "#ffdad2",
+                        "surface-container-highest": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed": "#ffdad2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed": "#9cf0ff",
+                        "on-secondary-container": "#00616d",
+                        "on-primary-fixed": "#161e00",
+                        "outline-variant": "#444933",
+                        "on-primary-container": "#556d00",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "tertiary": "#ffffff",
+                        "primary-fixed": "#c3f400",
+                        "surface-tint": "#abd600",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-secondary-fixed-variant": "#004f58",
+                        "surface-container": "#201f1f",
+                        "inverse-primary": "#506600",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface-variant": "#c4c9ac"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding": "16px",
+                        "stack-gap": "12px",
+                        "touch-target-min": "48px",
+                        "section-margin": "32px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "title-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Anton"],
+                        "display-lg": ["Anton"],
+                        "label-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Anton"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(195, 244, 0, 0.3);
+        }
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(195, 244, 0, 0.5);
+        }
+        .progress-ring {
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .custom-checkbox:checked {
+            background-color: theme('colors.primary-container');
+            border-color: theme('colors.primary-container');
+        }
+        .custom-checkbox:checked + label {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-lg text-body-lg antialiased pb-[88px] selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-container-padding h-touch-target-min w-full z-50 bg-background border-b border-white/10 sticky top-0">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container ring-1 ring-white/10">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-eG6W7uQs1cmVxeJyJimeupJ9q8xVsIflNF9dam8JYUor2Norg6o6m7bRsbHv2HLDyMCjYUsZReoOVmRaYWQZ5A9mflOZEpdpkgByMqYAnrTAtV4fpniCY6xlLx_BxEwLJZc45xYIMrjhY86LQbmic4qRDseofKTrYtnjXk0CsZPgl0I3rIl6kVcMJMdfodEg-P8VqkV5diEKxS0bBi5Grxq-6GSK3bdgYeyTKykqzBTMW6R0pDf31f6c1JZUwyoiLImh2kn0qQ"/>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">FatLoss</h1>
+</div>
+<button aria-label="Offline Mode" class="w-10 h-10 flex items-center justify-center text-primary hover:opacity-80 transition-opacity active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">offline_bolt</span>
+</button>
+</header>
+<main class="px-container-padding py-6 max-w-lg mx-auto w-full flex flex-col gap-section-margin">
+<!-- Greeting & Status -->
+<section class="flex flex-col gap-2">
+<h2 class="font-title-md text-title-md text-on-surface-variant">As-salamu alaykum, Sagor</h2>
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container neon-text-glow leading-tight">You're on track for 65kg!</p>
+</section>
+<!-- Weight Progress -->
+<section class="bg-surface rounded-xl p-5 border border-white/5 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex justify-between items-end mb-4 relative z-10">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block uppercase tracking-wider mb-1">Current Weight</span>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary">80</span>
+<span class="font-title-md text-title-md text-on-surface-variant">kg</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-on-surface-variant block uppercase tracking-wider mb-1">Target</span>
+<div class="flex items-baseline gap-1 justify-end">
+<span class="font-title-md text-title-md text-primary">65</span>
+<span class="font-label-md text-label-md text-on-surface-variant">kg</span>
+</div>
+</div>
+</div>
+<div class="relative h-3 w-full bg-surface-container-highest rounded-full overflow-hidden z-10">
+<div class="absolute top-0 left-0 h-full bg-primary-container rounded-full neon-glow" style="width: 25%;"></div>
+</div>
+<div class="flex justify-between mt-2 font-label-md text-label-md text-on-surface-variant z-10 relative">
+<span>Start: 85kg</span>
+<span>15kg to go</span>
+</div>
+</section>
+<!-- Daily Stats Rings -->
+<section class="grid grid-cols-3 gap-3">
+<!-- Calorie Ring -->
+<div class="bg-surface rounded-xl p-4 border border-white/5 flex flex-col items-center justify-center text-center gap-3">
+<div class="relative w-16 h-16">
+<svg class="w-full h-full progress-ring" viewbox="0 0 100 100">
+<circle class="text-surface-container-highest stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-primary-container stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8" style="filter: drop-shadow(0 0 4px rgba(195,244,0,0.5));"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="material-symbols-outlined text-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<div>
+<div class="font-title-md text-title-md text-primary leading-none mb-1">1,350</div>
+<div class="font-label-md text-label-md text-on-surface-variant">/1800 kcal</div>
+</div>
+</div>
+<!-- Protein Ring -->
+<div class="bg-surface rounded-xl p-4 border border-white/5 flex flex-col items-center justify-center text-center gap-3">
+<div class="relative w-16 h-16">
+<svg class="w-full h-full progress-ring" viewbox="0 0 100 100">
+<circle class="text-surface-container-highest stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-secondary stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="100.48" stroke-linecap="round" stroke-width="8" style="filter: drop-shadow(0 0 4px rgba(189,244,255,0.5));"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">egg_alt</span>
+</div>
+</div>
+<div>
+<div class="font-title-md text-title-md text-primary leading-none mb-1">85g</div>
+<div class="font-label-md text-label-md text-on-surface-variant">/120g</div>
+</div>
+</div>
+<!-- Steps -->
+<div class="bg-surface rounded-xl p-4 border border-white/5 flex flex-col items-center justify-center text-center gap-3">
+<div class="relative w-16 h-16">
+<svg class="w-full h-full progress-ring" viewbox="0 0 100 100">
+<circle class="text-surface-container-highest stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-tertiary-fixed-dim stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="150.72" stroke-linecap="round" stroke-width="8" style="filter: drop-shadow(0 0 4px rgba(255,180,162,0.5));"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" style="font-variation-settings: 'FILL' 1;">directions_walk</span>
+</div>
+</div>
+<div>
+<div class="font-title-md text-title-md text-primary leading-none mb-1">3.2k</div>
+<div class="font-label-md text-label-md text-on-surface-variant">/8,000</div>
+</div>
+</div>
+</section>
+<!-- Rule of the Day Banner -->
+<section class="bg-primary-container text-on-primary-container rounded-lg p-4 flex items-center gap-4 shadow-[0_0_20px_rgba(195,244,0,0.15)] transform hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="flex-1">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile leading-none tracking-tight">NEVER MISS TWICE</h3>
+<p class="font-label-md text-label-md mt-1 opacity-80 uppercase tracking-widest">Rule of the Day</p>
+</div>
+</section>
+<!-- Today's Checklist -->
+<section class="flex flex-col gap-stack-gap">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Today's Protocol</h3>
+<div class="bg-surface rounded-xl border border-white/5 overflow-hidden">
+<!-- Task 1 -->
+<div class="p-4 border-b border-white/5 flex items-center gap-4 hover:bg-surface-bright transition-colors">
+<input class="custom-checkbox appearance-none w-6 h-6 border-2 border-outline-variant rounded-md checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer relative flex-shrink-0" id="task1" type="checkbox"/>
+<label class="flex-1 font-title-md text-title-md cursor-pointer transition-all" for="task1">Morning Fasted Walk (30 min)</label>
+</div>
+<!-- Task 2 -->
+<div class="p-4 border-b border-white/5 flex items-center gap-4 hover:bg-surface-bright transition-colors">
+<input class="custom-checkbox appearance-none w-6 h-6 border-2 border-outline-variant rounded-md checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer relative flex-shrink-0" id="task2" type="checkbox"/>
+<label class="flex-1 font-title-md text-title-md cursor-pointer transition-all" for="task2">Workout Done</label>
+</div>
+<!-- Task 3 -->
+<div class="p-4 border-b border-white/5 flex items-center gap-4 hover:bg-surface-bright transition-colors">
+<input class="custom-checkbox appearance-none w-6 h-6 border-2 border-outline-variant rounded-md checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer relative flex-shrink-0" id="task3" type="checkbox"/>
+<label class="flex-1 font-title-md text-title-md cursor-pointer transition-all" for="task3">Followed Diet Rules</label>
+</div>
+<!-- Task 4 -->
+<div class="p-4 border-b border-white/5 flex items-center gap-4 hover:bg-surface-bright transition-colors">
+<input class="custom-checkbox appearance-none w-6 h-6 border-2 border-outline-variant rounded-md checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer relative flex-shrink-0" id="task4" type="checkbox"/>
+<label class="flex-1 font-title-md text-title-md cursor-pointer transition-all" for="task4">3.5L Water Completed</label>
+</div>
+<!-- Task 5 -->
+<div class="p-4 flex items-center gap-4 hover:bg-surface-bright transition-colors">
+<input class="custom-checkbox appearance-none w-6 h-6 border-2 border-outline-variant rounded-md checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer relative flex-shrink-0" id="task5" type="checkbox"/>
+<label class="flex-1 font-title-md text-title-md cursor-pointer transition-all" for="task5">Sleep/Phone Rules Followed</label>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-[72px] z-50 flex justify-around items-center px-4 pb-safe bg-surface border-t border-white/5 shadow-lg rounded-t-xl">
+<!-- Today (Active) -->
+<button aria-label="Today" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 shadow-[0_0_15px_rgba(195,244,0,0.3)] hover:opacity-80 transition-opacity active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md mt-1">Today</span>
+</button>
+<!-- Workout -->
+<button aria-label="Workout" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-md text-label-md mt-1">Workout</span>
+</button>
+<!-- Meals -->
+<button aria-label="Meals" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label-md text-label-md mt-1">Meals</span>
+</button>
+<!-- Progress -->
+<button aria-label="Progress" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label-md text-label-md mt-1">Progress</span>
+</button>
+</nav>
+<script>
+        // Add checkmarks to custom checkboxes using pseudo-elements via style for checked state
+        const style = document.createElement('style');
+        style.textContent = `
+            .custom-checkbox:checked::after {
+                content: '';
+                position: absolute;
+                left: 7px;
+                top: 3px;
+                width: 6px;
+                height: 12px;
+                border: solid #283500;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body></html>
