@@ -8,6 +8,7 @@ data class UserProfile(
     @PrimaryKey val id: Int = 1,
     val name: String = "Rakibul Hasan Sagor",
     val age: Int = 22,
+    val gender: String = "Male",
     val heightCm: Int = 175,
     val startWeightKg: Double = 80.0,
     val currentWeightKg: Double = 80.0,

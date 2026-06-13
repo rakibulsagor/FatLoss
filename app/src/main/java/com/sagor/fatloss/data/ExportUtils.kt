@@ -17,6 +17,7 @@ class ExportUtils(private val repository: FatLossRepository) {
             .put("profile", JSONObject()
                 .put("name", profile.name)
                 .put("age", profile.age)
+                .put("gender", profile.gender)
                 .put("heightCm", profile.heightCm)
                 .put("startWeightKg", profile.startWeightKg)
                 .put("currentWeightKg", profile.currentWeightKg)
@@ -70,6 +71,7 @@ class ExportUtils(private val repository: FatLossRepository) {
                 old.copy(
                     name = name,
                     age = p.optInt("age", old.age),
+                    gender = p.optString("gender", old.gender),
                     heightCm = p.optInt("heightCm", old.heightCm),
                     startWeightKg = p.optDouble("startWeightKg", old.startWeightKg),
                     currentWeightKg = current,

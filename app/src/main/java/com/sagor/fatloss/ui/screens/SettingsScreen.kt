@@ -101,6 +101,8 @@ fun SettingsScreen(vm: SettingsViewModel) {
     var visible by remember { mutableStateOf(false) }
     var name by remember(profile.name) { mutableStateOf(profile.name.ifBlank { "Sagor" }) }
     var age by remember(profile.age) { mutableStateOf(profile.age.toString()) }
+    var gender by remember(profile.gender) { mutableStateOf(profile.gender) }
+    var height by remember(profile.heightCm) { mutableStateOf(profile.heightCm.toString()) }
     var currentWeight by remember(profile.currentWeightKg) { mutableFloatStateOf(profile.currentWeightKg.toFloat()) }
     var targetWeight by remember(profile.targetWeightKg) { mutableFloatStateOf(profile.targetWeightKg.toFloat()) }
     var calories by remember(profile.calorieTarget) { mutableStateOf(profile.calorieTarget.toString()) }
@@ -143,7 +145,9 @@ fun SettingsScreen(vm: SettingsViewModel) {
         visible = true
     }
 
-    val bmi = currentWeight / ((profile.heightCm / 100f) * (profile.heightCm / 100f))
+    val heightCm = height.toIntOrNull()?.coerceIn(100, 250) ?: profile.heightCm
+    val heightMeters = heightCm / 100f
+    val bmi = currentWeight / (heightMeters * heightMeters)
 
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
         TopBar("Fat Loss", "7")
@@ -168,8 +172,22 @@ fun SettingsScreen(vm: SettingsViewModel) {
                         modifier = Modifier.weight(1f),
                         onValueChange = { age = it.filter { ch -> ch.isDigit() }.take(2) }
                     )
-                    ProfileMetricTile("Gender", "Male", "", Green, Modifier.weight(1f))
-                    ProfileMetricTile("Height", profile.heightCm.toString(), "cm", Green, Modifier.weight(1f))
+                    ProfileMetricTile(
+                        label = "Gender",
+                        value = gender,
+                        suffix = "",
+                        accent = Green,
+                        modifier = Modifier.weight(1f),
+                        onValueChange = { gender = it.take(24) }
+                    )
+                    ProfileMetricTile(
+                        label = "Height",
+                        value = height,
+                        suffix = "cm",
+                        accent = Green,
+                        modifier = Modifier.weight(1f),
+                        onValueChange = { height = it.filter { ch -> ch.isDigit() }.take(3) }
+                    )
                 }
 
                 WeightGoalCard(
@@ -182,7 +200,7 @@ fun SettingsScreen(vm: SettingsViewModel) {
                 BmiCard(title = "BMI Calculator", bmi = bmi, status = "Overweight", statusColor = Red)
                 BmiCard(
                     title = "Target BMI",
-                    bmi = targetWeight / ((profile.heightCm / 100f) * (profile.heightCm / 100f)),
+                    bmi = targetWeight / (heightMeters * heightMeters),
                     status = "Normal",
                     statusColor = Blue
                 )
@@ -241,7 +259,8 @@ fun SettingsScreen(vm: SettingsViewModel) {
                         UserProfile(
                             name = name.ifBlank { "Sagor" },
                             age = age.toIntOrNull() ?: profile.age,
-                            heightCm = profile.heightCm,
+                            gender = gender.ifBlank { profile.gender },
+                            heightCm = heightCm,
                             startWeightKg = profile.startWeightKg,
                             currentWeightKg = currentWeight.toDouble(),
                             targetWeightKg = targetWeight.toDouble(),
